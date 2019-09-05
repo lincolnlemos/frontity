@@ -18,20 +18,8 @@ const settings = {
               "/"
             ],
             [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
+              "Dra Alessandra",
+              "/anunciante/dra-alessandra-figueiredo-de-souza"
             ]
           ],
           "featured": {
@@ -45,7 +33,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://test.frontity.io/wp-json"
+          "api": "https://wordpress-217836-978334.cloudwaysapps.com/wp-json",
         }
       }
     },

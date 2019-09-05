@@ -5,6 +5,7 @@ import List from "./list";
 import Post from "./post";
 import Page404 from "./page404.js";
 import Loading from "./loading";
+import Anunciante from "./Anunciante";
 
 const globalStyles = css`
   body {
@@ -20,7 +21,7 @@ const globalStyles = css`
 `;
 
 const Theme = ({ state }) => {
-  const data = state.source.get(state.router.link);
+  const data = state.source.get(state.router.link); 
 
   return (
     <>
@@ -35,8 +36,10 @@ const Theme = ({ state }) => {
       </HeadContainer>
       <Body>
         {data.isFetching && <Loading />}
+        {data.isFrontPage && <div>Front Page!</div>}
         {data.isArchive && <List />}
-        {data.isPostType && <Post />}
+        {data.isAnunciante && <Anunciante />}
+        {/* {data.isPostType && <Post />} */}
         {data.is404 && <Page404 />}
       </Body>
     </>

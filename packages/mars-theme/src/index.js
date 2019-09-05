@@ -1,10 +1,12 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
+import { homeHandler, anunciantesHandler } from './handlers';
 
 const before = ({ libraries }) => {
   // We use html2react to process the <img> tags inside the content HTML.
-  libraries.html2react.processors.push(image);
+  libraries.html2react.processors.push(image);  
 };
+
 
 const marsTheme = {
   name: "@frontity/mars-theme",
@@ -20,11 +22,14 @@ const marsTheme = {
       }
     }
   },
-  actions: {
+  actions: {    
     theme: {
+      init: ({ libraries }) => {
+        libraries.source.handlers.push(homeHandler, anunciantesHandler)
+      },
       beforeSSR: before,
       beforeCSR: before
-    }
+    },    
   }
 };
 
